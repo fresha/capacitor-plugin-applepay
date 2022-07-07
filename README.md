@@ -1,4 +1,4 @@
-# capacitor-plugin-applepay
+# @fresha/capacitor-plugin-applepay
 
 [![npm version](https://badge.fury.io/js/@fresha%2Fcapacitor-plugin-applepay.svg)](https://www.npmjs.com/package/@fresha/capacitor-plugin-applepay)
 
@@ -8,7 +8,7 @@ When transaction is authorized, Payment response is returned along with payment 
 ## Install
 
 ```bash
-npm install capacitor-plugin-applepay
+npm install @fresha/capacitor-plugin-applepay
 npx cap sync
 ```
 
