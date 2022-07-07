@@ -1,5 +1,7 @@
 # capacitor-plugin-applepay
 
+[![npm version](https://badge.fury.io/js/@fresha%2Fcapacitor-plugin-applepay.svg)](https://www.npmjs.com/package/@fresha/capacitor-plugin-applepay)
+
 This Apple Pay plugin provides interfaces that allow you to initiate an Apple Pay payment sheet based on provided PaymentRequest.
 When transaction is authorized, Payment response is returned along with payment details and more importantly- a payment token that you should pass to your backend.
 
@@ -32,12 +34,12 @@ Before using this plugin, make sure that your project is correctly configured. U
 
 <docgen-index>
 
-* [`canMakePayments()`](#canmakepayments)
-* [`canMakePayments(...)`](#canmakepayments)
-* [`initiatePayment(...)`](#initiatepayment)
-* [`completeLastPayment(...)`](#completelastpayment)
-* [Interfaces](#interfaces)
-* [Type Aliases](#type-aliases)
+- [`canMakePayments()`](#canmakepayments)
+- [`canMakePayments(...)`](#canmakepayments)
+- [`initiatePayment(...)`](#initiatepayment)
+- [`completeLastPayment(...)`](#completelastpayment)
+- [Interfaces](#interfaces)
+- [Type Aliases](#type-aliases)
 
 </docgen-index>
 
@@ -54,8 +56,7 @@ Indicates whether the device supports Apple Pay.
 
 **Returns:** <code>Promise&lt;<a href="#canmakepaymentsresponse">CanMakePaymentsResponse</a>&gt;</code>
 
---------------------
-
+---
 
 ### canMakePayments(...)
 
@@ -72,8 +73,7 @@ This allows more granular control than regular `canMakePayments()`
 
 **Returns:** <code>Promise&lt;<a href="#canmakepaymentsresponse">CanMakePaymentsResponse</a>&gt;</code>
 
---------------------
-
+---
 
 ### initiatePayment(...)
 
@@ -89,8 +89,7 @@ Initiates a payment base on PaymentRequest object.
 
 **Returns:** <code>Promise&lt;<a href="#initiatepaymentresponse">InitiatePaymentResponse</a>&gt;</code>
 
---------------------
-
+---
 
 ### completeLastPayment(...)
 
@@ -104,11 +103,9 @@ Completes current payment
 | ------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | **`request`** | <code><a href="#completepaymentrequest">CompletePaymentRequest</a></code> | - <a href="#completepaymentrequest">CompletePaymentRequest</a> object containing status |
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### CanMakePaymentsResponse
 
@@ -116,14 +113,12 @@ Completes current payment
 | --------------------- | -------------------- |
 | **`canMakePayments`** | <code>boolean</code> |
 
-
 #### CanMakePaymentsRequest
 
 | Prop                | Type                              |
 | ------------------- | --------------------------------- |
 | **`usingNetworks`** | <code>PaymentNetwork[]</code>     |
 | **`capabilities`**  | <code>MerchantCapability[]</code> |
-
 
 #### InitiatePaymentResponse
 
@@ -133,7 +128,6 @@ Completes current payment
 | **`billingContact`**  | <code><a href="#paymentcontact">PaymentContact</a></code>                                                                                                                                                                                                                                                                                            |
 | **`shippingContact`** | <code><a href="#paymentcontact">PaymentContact</a></code>                                                                                                                                                                                                                                                                                            |
 
-
 #### PaymentContact
 
 | Prop                | Type                                                                                                                                                                   |
@@ -142,7 +136,6 @@ Completes current payment
 | **`phoneNumber`**   | <code>string</code>                                                                                                                                                    |
 | **`name`**          | <code><a href="#personnamecomponents">PersonNameComponents</a></code>                                                                                                  |
 | **`postalAddress`** | <code>{ street?: string; city?: string; postalCode?: string; country?: string; isoCountryCode?: string; subAdministrativeArea?: string; subLocality?: string; }</code> |
-
 
 #### PersonNameComponents
 
@@ -154,7 +147,6 @@ Completes current payment
 | **`middleName`** | <code>string</code> |
 | **`nameSuffix`** | <code>string</code> |
 | **`nickname`**   | <code>string</code> |
-
 
 #### InitiatePaymentRequest
 
@@ -172,7 +164,6 @@ Completes current payment
 | **`billingContact`**                | <code><a href="#paymentcontact">PaymentContact</a></code> |
 | **`shippingContact`**               | <code><a href="#paymentcontact">PaymentContact</a></code> |
 
-
 #### PaymentSummaryItem
 
 | Prop         | Type                                                                      |
@@ -181,36 +172,29 @@ Completes current payment
 | **`amount`** | <code>string</code>                                                       |
 | **`type`**   | <code><a href="#paymentsummaryitemtype">PaymentSummaryItemType</a></code> |
 
-
 #### CompletePaymentRequest
 
 | Prop         | Type                                                                        |
 | ------------ | --------------------------------------------------------------------------- |
 | **`status`** | <code><a href="#paymentcompletionstatus">PaymentCompletionStatus</a></code> |
 
-
 ### Type Aliases
-
 
 #### PaymentNetwork
 
 <code>'amex' | 'chinaUnionPay' | 'cartesBancaires' | 'discover' | 'eftpos' | 'electron' | 'idCredit' | 'interac' | 'JCB' | 'maestro' | 'masterCard' | 'privateLabel' | 'quicPay' | 'suica' | 'visa' | 'vPay'</code>
 
-
 #### MerchantCapability
 
 <code>'capability3DS' | 'capabilityCredit' | 'capabilityDebit' | 'capabilityEMV'</code>
-
 
 #### PaymentSummaryItemType
 
 <code>'pending' | 'final'</code>
 
-
 #### ContactField
 
 <code>'emailAddress' | 'name' | 'phoneNumber' | 'phoneticName' | 'postalAddress'</code>
-
 
 #### PaymentCompletionStatus
 
