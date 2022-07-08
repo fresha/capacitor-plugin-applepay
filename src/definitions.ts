@@ -137,7 +137,7 @@ export interface ApplePayPlugin {
   /**
    * Completes current payment
    * @param request - CompletePaymentRequest object containing status
-   * @returns Promise<void> that will be resolved on succes and rejected on failure.
+   * @returns Promise<void> that will be resolved on success and rejected on failure.
    */
   completeLastPayment(request: CompletePaymentRequest): Promise<void>;
 }
