@@ -91,8 +91,8 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual(Set(), emptyResolvedFields)
 
         let unknownFields = ["This should", "Return", "empty", "array"]
-        let expectedFieldsFromUknown: [PKContactField] = []
+        let expectedFieldsFromUnknown: [PKContactField] = []
         let resolvedUnknownFields = PKContactField.fromStringArray(fields: unknownFields)
-        XCTAssertEqual(Set(expectedFieldsFromUknown), resolvedUnknownFields)
+        XCTAssertEqual(Set(expectedFieldsFromUnknown), resolvedUnknownFields)
     }
 }

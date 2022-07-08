@@ -15,22 +15,22 @@ struct PaymentTokenDTO: Encodable {
     let paymentData: String
     let paymentMethod: PaymentMethodDTO?
 
-    init (with pkPaymenToken: PKPaymentToken) {
-        self.transactionIdentifier = pkPaymenToken.transactionIdentifier
-        self.paymentData = pkPaymenToken.paymentData.base64EncodedString()
-        self.paymentMethod = PaymentMethodDTO(with: pkPaymenToken.paymentMethod)
+    init (with pkPaymentToken: PKPaymentToken) {
+        self.transactionIdentifier = pkPaymentToken.transactionIdentifier
+        self.paymentData = pkPaymentToken.paymentData.base64EncodedString()
+        self.paymentMethod = PaymentMethodDTO(with: pkPaymentToken.paymentMethod)
     }
 }
 
 struct BillingContactDTO: Encodable {
     let emailAddress: String?
-    let postalAddess: PostalAddressDTO?
+    let postalAddress: PostalAddressDTO?
     let phoneNumber: String?
     let name: NameDTO?
 
     init(with pkContact: PKContact?) {
         self.emailAddress = pkContact?.emailAddress
-        self.postalAddess = PostalAddressDTO(with: pkContact?.postalAddress)
+        self.postalAddress = PostalAddressDTO(with: pkContact?.postalAddress)
         self.phoneNumber = pkContact?.phoneNumber?.stringValue
         self.name = NameDTO(with: pkContact?.name)
     }

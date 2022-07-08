@@ -18,7 +18,7 @@ class ApplePayTests: XCTestCase {
         XCTAssertEqual(true, result)
     }
 
-    func testinitiatePayment() {
+    func testInitiatePayment() {
         let callJSON = """
             {
              "summaryItems": [
