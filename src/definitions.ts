@@ -32,7 +32,7 @@ export declare type MerchantCapability =
 export declare type PaymentCompletionStatus = 'success' | 'failure';
 
 export interface CanMakePaymentsRequest {
-  usingNetworks: PaymentNetwork[];
+  networks: PaymentNetwork[];
   capabilities?: MerchantCapability[];
 }
 
