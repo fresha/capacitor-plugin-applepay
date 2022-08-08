@@ -41,9 +41,11 @@ class ApplePayService: NSObject {
         let request = callPayload.toPKPaymentRequest()
         let paymentController = PKPaymentAuthorizationController(paymentRequest: request)
         paymentController.delegate = self
-        paymentController.present { [weak self] (presented) in
-            if !presented {
-                self?.paymentInitHandler?(.failure(.couldNotPresentSheet))
+        DispatchQueue.main.async {
+            paymentController.present { [weak self] (presented) in
+                if !presented {
+                    self?.paymentInitHandler?(.failure(.couldNotPresentSheet))
+                }
             }
         }
     }
@@ -59,9 +61,10 @@ class ApplePayService: NSObject {
             resultHandler(.failure(.couldNotParsePaymentCompletionStatus))
             return
         }
-
-        paymentCompletionHandler(result)
         resultHandler(.success(()))
+        DispatchQueue.main.async {
+            paymentCompletionHandler(result)
+        }
         self.paymentCompletionHandler = nil
     }
 }
