@@ -5,6 +5,9 @@
 This Apple Pay plugin provides interfaces that allow you to initiate an Apple Pay payment sheet based on provided PaymentRequest.
 When transaction is authorized, Payment response is returned along with payment details and more importantly- a payment token that you should pass to your backend.
 
+For Capacitor 4 please use version 4.0.0+
+For Capacitor 3 please use lower versions.
+
 ## Install
 
 ```bash
