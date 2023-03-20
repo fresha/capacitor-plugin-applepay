@@ -14,7 +14,8 @@ export declare type PaymentNetwork =
   | 'quicPay'
   | 'suica'
   | 'visa'
-  | 'vPay';
+  | 'vPay'
+  | 'mada';
 
 export declare type PaymentSummaryItemType = 'pending' | 'final';
 export declare type ContactField =
