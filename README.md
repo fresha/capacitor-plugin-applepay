@@ -1,17 +1,21 @@
-# @fresha/capacitor-plugin-applepay
+# @ryancrummy-dept/capacitor-plugin-applepay
 
 [![npm version](https://badge.fury.io/js/@fresha%2Fcapacitor-plugin-applepay.svg)](https://www.npmjs.com/package/@fresha/capacitor-plugin-applepay)
+
+This is a fork on the plugin [@fresha/capacitor-plugin-applepay](https://github.com/fresha/capacitor-plugin-applepay). Refer to documentation there.
+
 
 This Apple Pay plugin provides interfaces that allow you to initiate an Apple Pay payment sheet based on provided PaymentRequest.
 When transaction is authorized, Payment response is returned along with payment details and more importantly- a payment token that you should pass to your backend.
 
-For Capacitor 4 please use version 4.0.0+
-For Capacitor 3 please use lower versions.
+- For Capacitor 5 please use version 5.0.0+. 
+- For Capacitor 4 please use version 4.0.0+. 
+- For Capacitor 3 please use lower versions.
 
 ## Install
 
 ```bash
-npm install @fresha/capacitor-plugin-applepay
+npm install @ryancrummy-dept/capacitor-plugin-applepay
 npx cap sync
 ```
 
