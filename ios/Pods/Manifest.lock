@@ -1,7 +1,7 @@
 PODS:
-  - Capacitor (4.3.0):
+  - Capacitor (5.1.1):
     - CapacitorCordova
-  - CapacitorCordova (4.3.0)
+  - CapacitorCordova (5.1.1)
 
 DEPENDENCIES:
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
@@ -19,4 +19,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ff70e1317c03f6f671dc2701ddd04ca685e574d3
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
